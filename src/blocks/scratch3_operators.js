@@ -33,6 +33,9 @@ class Scratch3OperatorsBlocks {
             operator_contains: this.contains,
             operator_mod: this.mod,
             operator_round: this.round,
+	    //Added Code
+	    operator_square: this.square,
+	    operator_squareroot: this.squareroot,
             operator_mathop: this.mathop
         };
     }
@@ -126,6 +129,25 @@ class Scratch3OperatorsBlocks {
 
     round (args) {
         return Math.round(Cast.toNumber(args.NUM));
+    }
+
+    }
+	// Added code
+	// Function to find Square of a number
+	square (args) {
+        return Math.pow(Cast.toNumber(args.NUM),2);
+    }
+	// Function to find Square Root of a number
+	squareroot(args) {
+	if(Cast.toNumber(args.TEXT)<0)
+	{
+		
+		return Math.sqrt(-1*Cast.toNumber(args.TEXT))+'i';
+	}
+	else
+	{
+        return Math.sqrt(Cast.toNumber(args.TEXT));
+	}
     }
 
     mathop (args) {
