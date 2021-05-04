@@ -1385,7 +1385,17 @@ const specMap = {
         ]
     },
     'rounded': {
-        opcode: 'operator_round',
+        opcode: 'operator_square',
+        argMap: [
+            {
+                type: 'input',
+                inputOp: 'math_number',
+                inputName: 'NUM'
+            }
+        ]
+    },
+    'rounded': {
+        opcode: 'operator_squareroot',
         argMap: [
             {
                 type: 'input',
